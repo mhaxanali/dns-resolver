@@ -1,0 +1,96 @@
+############################
+# Node / Web Dev
+############################
+# Dependencies
+node_modules/
+jspm_packages/
+
+# Build outputs
+dist/
+build/
+coverage/
+*.log
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Next.js / Vite / React caches
+.next/
+out/
+.vite/
+.svelte-kit/
+.storybook/
+
+# Misc
+*.tsbuildinfo
+
+
+############################
+# Python
+############################
+# Bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual envs
+venv/
+env/
+.venv/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Tools
+.pytest_cache/
+.mypy_cache/
+.cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+
+############################
+# Go
+############################
+# Go build artifacts
+bin/
+build/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go test cache
+*.test
+
+# Vendor (if not using it)
+vendor/
+
+# Logs
+*.log
+
+
+############################
+# OS / Editor / Misc
+############################
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dump files
+*.tmp
