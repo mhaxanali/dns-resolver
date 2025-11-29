@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS Resolver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DNS Resolver</h1>
+            <p>Resolve domain names to IP addresses</p>
+        </header>
+
+        <main>
+            <section class="search-section">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="domain-input" 
+                        placeholder="Enter a domain name (e.g., example.com)"
+                        aria-label="Domain name input"
+                    >
+                    <button id="resolve-btn" aria-label="Resolve domain">Resolve</button>
+                </div>
+            </section>
+
+            <section class="results-section">
+                <div id="results-container">
+                    <p class="placeholder-text">Enter a domain name and click Resolve to get started</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 DNS Resolver. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
