@@ -5,7 +5,7 @@ rem Remove old venv and create new one
 rmdir /s /q venv 2>nul
 python -m venv venv
 call venv\Scripts\activate.bat
-pip install -e flask-server
+pip install .
 
 rem Build Go executable
 cd api

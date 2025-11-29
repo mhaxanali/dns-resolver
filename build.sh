@@ -6,7 +6,7 @@ cd backend
 rm -rf venv
 python3 -m venv venv
 source venv/bin/activate
-pip install -e flask-server
+pip install .
 
 # Build Go executable
 cd api
