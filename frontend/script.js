@@ -9,9 +9,6 @@ btn.addEventListener("click", () => {
 
 function resolve(domain) {
     const container = document.getElementById("results-container")
-    const placeholder = document.getElementById("results-placeholder")
-    
-    placeholder.hidden = true  // Hide placeholder
     
     fetch(`http://localhost:8080/lookup?domain=${domain}`)
         .then(res => res.json())
