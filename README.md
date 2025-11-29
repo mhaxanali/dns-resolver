@@ -83,7 +83,7 @@ dns-resolver/
 │   ├── api/           # Go backend
 │   ├── flask-server/  # Python cache service
 │   ├── log/           # Logging utilities
-├── resources/         # SQLite database
+│   ├── resources/     # SQLite database
 ├── frontend/          # HTML/CSS/JS
 └── scripts/           # Build and run scripts
 ```
