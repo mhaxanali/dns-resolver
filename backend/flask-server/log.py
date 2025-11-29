@@ -6,10 +6,10 @@ class Log:
         self.name = name
 
     def warning(self, text):
-        print(f"{datetime.now()} | [WARNING] | {self.name} | {text}\n")
+        print(f"{datetime.now().strftime("%Y-%m-%d %H:%M:%S")} | [WARNING] | {self.name} | {text}")
 
     def fatal(self, text):
-        print(f"{datetime.now()} | [FATAL] | {self.name} | {text}\n")
+        print(f"{datetime.now().strftime("%Y-%m-%d %H:%M:%S")} | [FATAL] | {self.name} | {text}")
 
     def info(self, text):
-        print(f"{datetime.now()} | [INFO] | {self.name} | {text}\n")
+        print(f"{datetime.now().strftime("%Y-%m-%d %H:%M:%S")} | [INFO] | {self.name} | {text}")
