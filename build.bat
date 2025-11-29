@@ -14,3 +14,5 @@ go build -o api.exe api.go
 
 cd ..\..
 echo Build complete
+
+pause
