@@ -4,6 +4,9 @@ import os
 # Add backend/ to path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+db_path = os.path.join(project_root, 'resources', 'dns_store.db')
+
 from log.log import Log
 
 from flask import Flask, request, jsonify
@@ -27,7 +30,7 @@ CORS(app)
 
 log = Log(__name__)
 
-conn = sqlite3.connect("resources/dns_store.db", check_same_thread=False)
+conn = sqlite3.connect(db_path, check_same_thread=False)
 cursor = conn.cursor()
 
 cursor.execute('''
