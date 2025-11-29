@@ -94,3 +94,5 @@ Thumbs.db
 
 # Dump files
 *.tmp
+
+*.db

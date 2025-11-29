@@ -1,10 +1,26 @@
-from log import Log
+import sys
+import os
+
+# Add backend/ to path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from log.log import Log
 
 from flask import Flask, request, jsonify
 
 from flask_cors import CORS
 
 import sqlite3
+
+import logging
+
+# Silence Flask's request logs
+_ = logging.getLogger('werkzeug')
+_.setLevel(logging.ERROR)
+
+# Silence the "development server" warning
+import os
+os.environ['FLASK_ENV'] = 'production'
 
 app = Flask(__name__)
 CORS(app)

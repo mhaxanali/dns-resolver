@@ -1,4 +1,4 @@
-package api
+package main
 
 import (
 	"encoding/json"
@@ -14,7 +14,7 @@ type Response struct {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-
+	log.Info("Handler called")  // Add this first line
 	var ip string
 
 	domain := r.URL.Query().Get("domain")
