@@ -14,7 +14,18 @@ type Response struct {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	log.Info("Handler called")  // Add this first line
+	// Add CORS headers at the very start
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+
+	// Handle preflight OPTIONS request
+	if r.Method == "OPTIONS" {
+		w.WriteHeader(http.StatusOK)
+		return
+	}
+
+	log.Info("Handler called")
 	var ip string
 
 	domain := r.URL.Query().Get("domain")
