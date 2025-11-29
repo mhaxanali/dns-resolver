@@ -1,3 +1,4 @@
 @echo off
+call backend\venv\Scripts\activate.bat
 start /B python backend\flask-server\server.py
-cd backend\api && go run api.go
+backend\api\api.exe
