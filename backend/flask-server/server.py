@@ -81,3 +81,7 @@ def store():
     
     log.info(f"Inserted into store: ({domain}, {ip})")
     return jsonify({"status": "success"})
+
+if __name__ == '__main__':
+    log.info("Service started.")
+    app.run(host="0.0.0.0", port=5050, debug=False)
