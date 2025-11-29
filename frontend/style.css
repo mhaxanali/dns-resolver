@@ -1,0 +1,106 @@
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #000; /* dark background vibe */
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #00e0ff; /* neon blue */
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Input section */
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #111;
+    color: #fff;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #555;
+}
+
+.input-group button {
+    padding: 1rem 2rem;
+    background-color: #00e0ff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input-group button:hover {
+    background-color: #00bcd4;
+}
+
+/* Results section */
+.results-section {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#results-container {
+    background-color: #111;
+    padding: 2rem;
+    border-radius: 12px;
+    min-height: 100px;
+    max-width: 600px;  /* Add this - matches .input-group max-width */
+    margin: 0 auto;     /* Add this - centers it */
+}
+.placeholder-text {
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem 0;
+    color: #666;
+}
