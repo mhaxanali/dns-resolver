@@ -43,6 +43,16 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	if data["ip"] == nil {
 		ips, err := net.LookupHost(domain)
 
+		if !(len(ips) > 0) {
+			response := Response{
+				IP: "No IP record was found for domain.",
+			}
+			w.Header().Set("Content-Type", "application/json")
+			w.WriteHeader(http.StatusOK)
+			json.NewEncoder(w).Encode(response)
+			return
+		}
+
 		ip = ips[0]
 
 		if err != nil {
