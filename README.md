@@ -1,12 +1,13 @@
 # DNS Resolver
 
-A fast, multi-service DNS resolver with intelligent caching and TTL-based cache expiration built with Go, Python, and vanilla JavaScript.
+A multi-service DNS resolver with caching and TTL-based cache expiration built with Go, Python, and vanilla JavaScript.\
+Built as a practice project for connecting services written in different languages. A single-process version would be simpler; the split is deliberate.
 
 ## Features
 
 - **DNS Resolution:** Resolves domain names to IP addresses using Go's native `net` package
-- **Smart Caching with TTL:** Python Flask service with SQLite backend caches results with configurable time-to-live
-- **Cache Expiration:** Automatic cache invalidation after 1 day to ensure fresh results
+- **Caching with TTL:** Python Flask service with SQLite backend caches results with time-to-live
+- **Cache Expiration:** Automatic cache invalidation after 1 hour to ensure fresh results
 - **Clean UI:** Minimalist dark-themed frontend for easy domain resolution
 - **Multi-Service Architecture:** Go backend communicates with Python cache service
 
@@ -82,9 +83,8 @@ dns-resolver/
 ├── backend/
 │   ├── api/           # Go backend
 │   ├── flask-server/  # Python cache service
-│   ├── log/           # Logging utilities
-│   
-├── resources/     # SQLite database
+│   └──log/           # Logging utilities
+├── resources/         # SQLite database
 ├── frontend/          # HTML/CSS/JS
 └── scripts/           # Build and run scripts
 ```
