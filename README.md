@@ -52,12 +52,12 @@ scripts\build.bat
 
 **Linux/Mac:**
 ```bash
-./scripts/run.sh
+./scripts/start.sh
 ```
 
 **Windows:**
 ```bat
-scripts\run.bat
+scripts\start.bat
 ```
 
 Then open `frontend/index.html` in your browser and start resolving domains.
@@ -83,7 +83,7 @@ dns-resolver/
 ├── backend/
 │   ├── api/           # Go backend
 │   ├── flask-server/  # Python cache service
-│   └──log/            # Logging utilities
+│   └── log/           # Logging utilities
 ├── resources/         # SQLite database
 ├── frontend/          # HTML/CSS/JS
 └── scripts/           # Build and run scripts
